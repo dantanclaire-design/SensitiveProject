@@ -657,3 +657,7 @@ a:hover {
         display: none;
     }
 }
+
+h1.hero-title {
+    color: #d4c5b0 !important;
+}
