@@ -114,12 +114,11 @@ a:hover {
     flex-direction: column;
     justify-content: center;
 }
-
 .hero-title {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 20px;
+    font-family: 'Resistancegenerale', serif;
+    font-size: 3rem;
+    font-weight: normal; /* important aussi */
+    color: #d4c5b0;
 }
 
 .hero-subtitle {
