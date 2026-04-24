@@ -137,7 +137,7 @@ a:hover {
     text-transform: uppercase;
     
 .hero-quote {
-    font-family: 'Playfair Display', serif !important;
+    font-family: 'Playfair Display', serif;
     font-style: italic;
     font-size: 16px;
     color: #c85a54;
