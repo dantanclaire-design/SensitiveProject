@@ -1,3 +1,117 @@
+@@ -1,661 +1,661 @@
+@font-face {
+    font-family: 'Resistancegenerale';
+    src: url('fonts/Resistancegenerale.woff2') format('woff2');
+    font-display: swap;
+}
+
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #d4c5b0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Resistancegenerale', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+a {
+    color: #d4c5b0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #c85a54;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #0a0a0a;
+    border-bottom: 1px solid #d4c5b0;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-link {
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #c85a54;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: #d4c5b0;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* Hero Section */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 50px;
+}
+
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero-left {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,6 +121,8 @@
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
   color: #d4c5b0;
 }
 
@@ -22,11 +138,9 @@
     margin-bottom: 25px;
     letter-spacing: 1px;
     text-transform: uppercase;
+}
 
-    
 .hero-quote {
-    font-family: 'Playfair Display', serif;
-    font-family: 'Playfair Display', serif;
     font-style: italic;
     font-size: 16px;
     color: #c85a54;
