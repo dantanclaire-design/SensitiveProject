@@ -135,10 +135,9 @@ a:hover {
     margin-bottom: 25px;
     letter-spacing: 1px;
     text-transform: uppercase;
-}
 
 .hero-quote {
-    font-style: italic;
+    font-family: 'Playfair Display', italic;
     font-size: 16px;
     color: #c85a54;
     margin: 40px 0;
