@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Resistance générale';
-    src: url('fonts/Resistance générale.otf') format('opentype');
+    font-family: 'Resistancegenerale';
+    src: url('fonts/Resistancegenerale.otf') format('opentype');
     font-display: swap;
 }
 
@@ -20,7 +20,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Resistance générale', serif;
+    font-family: 'Resistancegenerale', serif;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
