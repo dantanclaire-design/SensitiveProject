@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Resistancegenerale';
     src: url('fonts/Resistancegenerale.woff2') format('woff2');
+    src: url('fontsResistancegenerale.woff2') format('woff2');
     font-display: swap;
 }
 
@@ -117,10 +118,10 @@ a:hover {
 }
 
 .hero-title {
-  font-family: 'Playfair Display', serif;
   font-size: 3rem;
   font-weight: bold;
-  color: #d4c5b0;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .hero-subtitle {
@@ -139,7 +140,6 @@ a:hover {
 
 .hero-quote {
     font-style: italic;
-    font-family: 'Playfair Display', italic;
     font-size: 16px;
     color: #c85a54;
     margin: 40px 0;
