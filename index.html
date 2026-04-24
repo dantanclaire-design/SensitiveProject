@@ -3,41 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>The Sensitive Project</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&family=Libre+Baskerville&display=swap" rel="stylesheet">
 
 <style>
+
+/* BASE */
 body {
-    margin: 0;
-    background: #0b0b0b;
-    color: #eaeaea;
-    font-family: 'Inter', sans-serif;
+    margin:0;
+    background:#0a0a0a;
+    color:#eaeaea;
+    font-family:'Inter', sans-serif;
 }
 
-/* grain */
-body::after {
+/* GRAIN */
+body::after{
     content:"";
     position:fixed;
     inset:0;
-    background:url('https://grainy-gradients.vercel.app/noise.svg');
-    opacity:.07;
+    background:url("https://grainy-gradients.vercel.app/noise.svg");
+    opacity:.06;
     pointer-events:none;
 }
 
 /* NAV */
-nav {
+nav{
     display:flex;
     justify-content:space-between;
     padding:25px 60px;
-    font-size:.75rem;
-    letter-spacing:1px;
+    font-size:.7rem;
+    letter-spacing:1.5px;
     text-transform:uppercase;
     opacity:.7;
 }
 
 /* MAIN GRID */
-.layout {
+.wrapper{
     display:grid;
     grid-template-columns: 3fr 5fr 4fr;
     gap:30px;
@@ -45,67 +49,90 @@ nav {
 }
 
 /* LEFT COLUMN */
-.left {
+.left{
     display:flex;
     flex-direction:column;
     gap:30px;
 }
 
-.title {
+.title{
     font-family:'Playfair Display', serif;
-    font-size:4.5rem;
-    line-height:.9;
+    font-size:5rem;
+    line-height:.85;
 }
 
-.subtitle {
-    font-size:.8rem;
+.subtitle{
+    font-size:.75rem;
     letter-spacing:2px;
-    opacity:.7;
+    opacity:.6;
 }
 
-.text {
+.text{
     font-size:.9rem;
     line-height:1.6;
     max-width:260px;
     opacity:.85;
 }
 
-.tags {
-    margin-top:20px;
+.tags{
     font-size:.7rem;
     letter-spacing:1px;
     opacity:.6;
+    margin-top:20px;
 }
 
-/* CENTER IMAGE */
-.center {
+/* CENTER */
+.center{
     position:relative;
 }
 
-.center img {
+.center img{
     width:100%;
+    display:block;
     filter:contrast(110%) brightness(85%);
 }
 
 /* ASTRO OVERLAY */
-.overlay-lines {
+.astro{
     position:absolute;
     top:0;
     left:0;
     width:100%;
-    opacity:.4;
+    opacity:.35;
+}
+
+/* HANDWRITING */
+.handwriting{
+    position:absolute;
+    top:5%;
+    left:10%;
+    font-family:'Libre Baskerville', serif;
+    font-size:.9rem;
+    opacity:.7;
+    line-height:1.4;
+}
+
+/* RED DRAWING */
+.red-draw{
+    position:absolute;
+    left:-20px;
+    top:20%;
+    width:80px;
+    height:300px;
+    border-left:3px solid rgba(200,50,50,0.8);
+    transform:rotate(-5deg);
 }
 
 /* RIGHT COLUMN */
-.right {
-    display:flex;
-    flex-direction:column;
+.right{
+    display:grid;
+    grid-template-rows:auto auto auto auto;
     gap:20px;
 }
 
 /* WHITE PANEL */
-.panel {
-    background:#e8e3db;
+.panel{
+    background:#e7e2da;
     color:#111;
     padding:25px;
     font-size:.8rem;
@@ -113,40 +140,51 @@ nav {
 }
 
 /* IMAGE BLOCK */
-.img-block img {
+.img{
+    position:relative;
+}
+
+.img img{
     width:100%;
     display:block;
+    filter:contrast(105%);
+}
+
+/* ROUND STAMP */
+.stamp{
+    position:absolute;
+    right:10%;
+    top:20%;
+    border:1px solid red;
+    border-radius:50%;
+    padding:20px;
+    font-size:.6rem;
+    text-align:center;
+    transform:rotate(-10deg);
+    color:red;
 }
 
 /* PINK PANEL */
-.pink {
+.pink{
     background:#caa3a3;
     color:#111;
+    padding:20px;
+    font-size:.8rem;
 }
 
 /* HAND PANEL */
-.hand {
-    background:#e8e3db;
+.hand-panel{
+    background:#e7e2da;
     color:#111;
     padding:20px;
     text-align:center;
     font-size:.75rem;
 }
 
-/* FLOATING TEXT */
-.floating {
-    position:absolute;
-    top:10%;
-    left:10%;
-    font-family:'Playfair Display', serif;
-    font-size:1rem;
-    opacity:.7;
-}
-
 /* FOOTER */
-.footer {
-    margin-top:40px;
+.footer{
     border-top:1px solid #333;
+    margin-top:40px;
     padding:20px 60px;
     display:flex;
     justify-content:space-between;
@@ -156,10 +194,11 @@ nav {
 
 /* RESPONSIVE */
 @media(max-width:1000px){
-    .layout {
+    .wrapper{
         grid-template-columns:1fr;
     }
 }
+
 </style>
 </head>
 
@@ -170,7 +209,7 @@ nav {
     <div>ABOUT &nbsp;&nbsp; JOURNAL &nbsp;&nbsp; CONTACT</div>
 </nav>
 
-<div class="layout">
+<div class="wrapper">
 
     <!-- LEFT -->
     <div class="left">
@@ -184,8 +223,7 @@ nav {
 
         <div class="text">
             Une approche astrologique et stylistique du corps comme carte sensible.
-            Pour réapprendre à regarder.
-            Pour se réapproprier sa propre image.
+            Pour réapprendre à regarder. Pour se réapproprier sa propre image.
         </div>
 
         <div class="tags">
@@ -198,16 +236,19 @@ nav {
 
     <!-- CENTER -->
     <div class="center">
+
         <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
 
-        <div class="floating">
+        <img class="astro" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Astrological_chart.svg">
+
+        <div class="handwriting">
             I don’t observe bodies.<br>
             I translate the myths<br>
             that run through them.
         </div>
 
-        <!-- fake astro overlay -->
-        <img class="overlay-lines" src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Astrological_chart.svg">
+        <div class="red-draw"></div>
+
     </div>
 
     <!-- RIGHT -->
@@ -222,18 +263,19 @@ nav {
             RECONSTRUCTED GAZE
         </div>
 
-        <div class="img-block">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330">
+        <div class="img">
+            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91">
+            <div class="stamp">ATTENTION<br>AS A<br>POLITICAL ACT</div>
         </div>
 
-        <div class="panel pink">
+        <div class="pink">
             DISCOVER THE SERIES OF PORTRAITS AND THEIR READINGS
         </div>
 
-        <div class="hand">
+        <div class="hand-panel">
             BODY READING SESSIONS<br><br>
             A READING IS NOT A DIAGNOSIS.<br>
-            IT’S A HYPOTHESIS OF BEAUTY.
+            IT IS A HYPOTHESIS OF BEAUTY.
         </div>
 
     </div>
@@ -241,8 +283,8 @@ nav {
 </div>
 
 <div class="footer">
-    <div>UPCOMING: EXHIBITION AND BOOK</div>
-    <div>ONGOING WORK</div>
+    <div>UPCOMING: EXHIBITION AND BOOK RELEASE</div>
+    <div>THE PROJECT IS A CONTINUOUS WORK IN PROGRESS</div>
     <div>ARCHIVE / JOURNAL / RESOURCES</div>
 </div>
 
