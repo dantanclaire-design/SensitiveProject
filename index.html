@@ -41,23 +41,130 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="project">
-        <div class="hero-container">
-            <div class="hero-left">
-                <h1 class="hero-title">
-                    THE<br>SENSITIVE<br>PROJECT
-                </h1>
-                <p class="hero-subtitle">BODY READING</p>
+<style>
 
-                 <div class="text">
-            À VENIR<br><br>
-            EXPOSITION<br>
-            ET SORTIE DU LIVRE<br>
-            PRINTEMPS 2025
-        </div>
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    </div>
+body {
+    background:#0a0a0a;
+    color:#d4c5b0;
+    font-family:'Inter', sans-serif;
+}
+
+/* DOUBLE PAGE */
+.page {
+    display:grid;
+    grid-template-columns: 1fr 1.4fr;
+    min-height:100vh;
+}
+
+/* LEFT */
+.left {
+    padding:80px 60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    position:relative;
+}
+
+/* TITLE */
+.title {
+    font-family:'Playfair Display', serif;
+    font-size:5.5rem;
+    line-height:0.9;
+}
+
+/* TEXT */
+.text {
+    font-size:12px;
+    letter-spacing:1px;
+    line-height:1.8;
+    margin-top:40px;
+}
+
+/* QUOTE */
+.quote {
+    margin-top:40px;
+    font-style:italic;
+    color:#c85a54;
+}
+
+/* RIGHT */
+.right {
+    position:relative;
+    overflow:hidden;
+}
+
+/* IMAGE PRINCIPALE */
+.main-img {
+    position:absolute;
+    right:-5%;
+    top:0;
+    height:100%;
+    z-index:1;
+}
+
+/* IMAGE DETAIL */
+.detail-img {
+    position:absolute;
+    bottom:10%;
+    left:5%;
+    width:180px;
+    z-index:3;
+    border:1px solid #d4c5b0;
+}
+
+/* IMAGE TEXTURE */
+.texture-img {
+    position:absolute;
+    top:20%;
+    left:-10%;
+    width:300px;
+    opacity:0.3;
+    z-index:2;
+}
+
+/* DIAGRAM */
+.diagram {
+    position:absolute;
+    top:10%;
+    left:-10%;
+    width:120%;
+    opacity:0.12;
+    z-index:2;
+}
+
+
+
+/* NOTE */
+.note {
+    position:absolute;
+    bottom:20%;
+    right:10%;
+    font-size:13px;
+    color:#c85a54;
+    transform:rotate(-5deg);
+    z-index:5;
+}
+
+/* OVERLAY TEXT (IMPORTANT) */
+.overlay-text {
+    position:absolute;
+    top:50%;
+    left:20%;
+    font-size:10px;
+    letter-spacing:1px;
+    color:#d4c5b0;
+    z-index:4;
+    opacity:0.8;
+}
+
+</style>
+</head>
 
  <div class="right">
 
@@ -90,6 +197,46 @@
             Donner une autre grammaire au regard.
         </div>
 
+
+
+    
+    <!-- Hero Section -->
+    <section class="hero" id="project">
+        <div class="hero-container">
+            <div class="hero-left">
+                <h1 class="hero-title">
+                    THE<br>SENSITIVE<br>PROJECT
+                </h1>
+                <p class="hero-subtitle">BODY READING</p>
+
+                <p class="hero-text">
+                    UN PROJET ARTISTIQUE À LA CROISÉE DE LA PHOTOGRAPHIE, DU STYLISME ET DE L'ASTROLOGIE.
+                </p>
+
+                <p class="hero-text">
+                    UNE TENTATIVE DE RECONSTRUCTION DU REGARD APRÈS LE TRAUMA.
+                </p>
+
+                <p class="hero-text">
+                    LE CORPS COMME CARTE.<br>LE STYLE COMME GRAMMAIRE.<br>L'IMAGE COMME TRADUCTION.
+                </p>
+
+                <p class="hero-quote">
+                    Je ne photographie pas les corps.<br>
+                    Je traduis les mythes qui les traversent.
+                </p>
+
+                <div class="coming-soon">
+                    <p>À VENIR</p>
+                    <p>EXPOSITION<br>ET SORTIE DU LIVRE<br>PRINTEMPS 2025</p>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <img src="https://i.postimg.cc/Z5pSZW5g/nausea.jpg" alt="Hero Portrait" class="hero-image">
+                <div class="astro-overlay">
+                    <p>SUN IN SCORPIO<br>MOON IN PISCES<br>RISING IN SAGITTARIUS</p>
+                </div>
             </div>
         </div>
     </section>
@@ -307,5 +454,8 @@
 
     <script src="script.js"></script>
 </body>
+</html>
+
+
 </html>
 
